@@ -9,7 +9,7 @@ const fs = require("fs");
 
 const { getAdapterIp } = require("./server-scripts/adapter-selector");
 
-const startDate = new Date(2024, 6, 23); // Bulan di JavaScript dimulai dari 0 (Januari) jadi 6 adalah Juli
+const startDate = new Date(2024, 6, 25); // Bulan di JavaScript dimulai dari 0 (Januari) jadi 6 adalah Juli
 const today = new Date();
 const diffTime = Math.abs(today - startDate);
 const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));

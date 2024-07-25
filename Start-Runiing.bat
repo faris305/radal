@@ -2,7 +2,7 @@
 setlocal
 
 :: Set tanggal awal (format YYYYMMDD)
-set "start_date=20240723"
+set "start_date=20240725"
 
 :: Ambil tanggal hari ini
 for /f "tokens=2 delims==" %%i in ('"wmic os get localdatetime /value"') do set "today=%%i"
