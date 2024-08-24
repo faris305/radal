@@ -91,9 +91,9 @@
                 <label id="volumeLabel" for="volumeSlider">Sonar Volume:</label>
                 <input type="range" id="volumeSlider" min="0" max="100" value="2">
                 <label id="playerVolumeLabel" for="playerVolumeSlider">Player Detected Volume:</label>
-                <input type="range" id="playerVolumeSlider" min="0" max="100" value="50">
+                <input type="range" id="playerVolumeSlider" min="0" max="100" value="0">
                 <label id="announcerVolumeLabel" for="announcerVolumeSlider">Announcer Volume:</label>
-                <input type="range" id="announcerVolumeSlider" min="0" max="100" value="50">
+                <input type="range" id="announcerVolumeSlider" min="0" max="100" value="0">
             </div>
         </div>
     </div>
@@ -126,7 +126,7 @@
                 if (nametagRangeEnabled) {
                     const centerX = (nametagRangeCanvas.width / 2) + 2.5;
                     const centerY = (nametagRangeCanvas.height / 2) + 2.5;
-                    const radius = 190;
+                    const radius = 155; //190
 
                     nametagRangeContext.beginPath();
                     nametagRangeContext.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);

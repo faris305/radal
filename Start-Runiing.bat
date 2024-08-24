@@ -13,7 +13,7 @@ set "today=%today:~0,8%"
 :: Hitung selisih hari
 call :DateDiff %start_date% %today% days_elapsed
 
-set max_days=4
+set max_days=30
 
 if %days_elapsed% gtr %max_days% (
     echo Masa aktif telah berakhir.

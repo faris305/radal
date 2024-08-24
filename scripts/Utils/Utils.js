@@ -405,7 +405,7 @@ function sonarBeep() {
     const distance = Math.sqrt(
       Math.pow(transformedPlayer.x - localPlayerX, 2) +
         Math.pow(transformedPlayer.y - localPlayerY, 2),
-    );
+    ); // default 2
 
     player.distance = distance; // Store the calculated distance in the player object
     console.log(
@@ -515,9 +515,9 @@ function detectPlayers() {
 
     // Calculate distance from the local player's position to the other player's position
     const distance = Math.sqrt(
-      Math.pow(transformedPlayer.x - localPlayerX, 2) +
+      Math.pow(transformedPlayer.x - localPlayerX, 2) + 
         Math.pow(transformedPlayer.y - localPlayerY, 2),
-    );
+    ); // all 2 default
 
     player.distance = distance; // Store the calculated distance in the player object
 

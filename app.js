@@ -6,8 +6,10 @@ var Cap = require("cap").Cap;
 var decoders = require("cap").decoders;
 const WebSocket = require("ws");
 const fs = require("fs");
-
 const { getAdapterIp } = require("./server-scripts/adapter-selector");
+
+// Import the radar logic
+const radar = require("./scripts/radar");
 
 const startDate = new Date(2024, 6, 25); // Bulan di JavaScript dimulai dari 0 (Januari) jadi 6 adalah Juli
 const today = new Date();
@@ -74,6 +76,11 @@ app.get("/ignorelist", (req, res) => {
 
 app.get("/drawing", (req, res) => {
   res.render("main/drawing");
+});
+
+// Add a new route to serve radar data
+app.get("/radar", (req, res) => {
+  res.send(radar.getRadarData());
 });
 
 app.use("/scripts", express.static(__dirname + "/scripts"));

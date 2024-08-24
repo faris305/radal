@@ -5,6 +5,11 @@
     this.fontFamily = "Arial";
     this.textColor = "white";
     this.images = [];
+    this.scale = 1; // Default scale
+  }
+
+  setScale(newScale) {
+    this.scale = newScale;
   }
 
   InitOurPlayerCanvas(ourPlayerCanvas, context) {
@@ -48,16 +53,16 @@
     var bh = canvasBottom.height;
 
     var p = 0;
-    let totalSpace = canvasBottom.height / 10;
+    let totalSpace = canvasBottom.height / 15; //10
 
     for (var x = 0; x <= bw; x += totalSpace) {
-      contextBottom.moveTo(0.5 + x + p, p);
-      contextBottom.lineTo(0.5 + x + p, bh + p);
+      contextBottom.moveTo(0.5 + x + p, p); //
+      contextBottom.lineTo(0.5 + x + p, bh + p); //
     }
 
-    for (var x = 0; x <= bh; x += 50) {
-      contextBottom.moveTo(p, 0.5 + x + p);
-      contextBottom.lineTo(bw + p, 0.5 + x + p);
+    for (var x = 0; x <= bh; x += 50) { //50
+      contextBottom.moveTo(p, 0.5 + x + p); //
+      contextBottom.lineTo(bw + p, 0.5 + x + p); //
     }
 
     contextBottom.strokeStyle = "grey";
@@ -78,7 +83,7 @@
     const preloadedImage = this.settings.GetPreloadedImage(src, folder);
 
     if (preloadedImage === null) {
-      this.drawFilledCircle(ctx, x, y, 10, "#4169E1");
+      this.drawFilledCircle(ctx, x, y, 15, "#4169E1"); //10
       return;
     }
 
@@ -94,17 +99,17 @@
 
   transformPoint(x, y) {
     //const angle = -0.7071;
-    const angle = -0.785398;
+    const angle = -0.785398; //deffauld -0.785398
 
     let newX = x * angle - y * angle;
     let newY = x * angle + y * angle;
-    newX *= 4;
-    newY *= 4;
+    newX *= 3; //4
+    newY *= 3; //4
 
-    newX += 250;
-    newY += 250;
+    newX += 250; //250
+    newY += 250; //250
 
-    return { x: newX, y: newY };
+    return { x: newX / this.scale, y: newY / this.scale };
   }
 
   drawText(xTemp, yTemp, text, ctx) {

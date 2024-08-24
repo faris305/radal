@@ -62,8 +62,8 @@ export class PlayersDrawing extends DrawingUtils {
               this.drawTextItems(posX + 15, posY + 47, `${playerOne.currentHealth}/${playerOne.initialHealth}`, context, "16px", "red");
 
               // Draw items
-              posX = 170;
-              let itemPosY = posY + 31; // Adjusted for correct positioning
+              posX = 180; // 170
+              let itemPosY = posY + 41; // Adjusted for correct positioning 31
               const items = playerOne.items;
 
               if (items && items["type"] !== "Buffer") {
