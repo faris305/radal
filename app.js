@@ -15,10 +15,10 @@ const startDate = new Date(2024, 6, 25); // Bulan di JavaScript dimulai dari 0 (
 const today = new Date();
 const diffTime = Math.abs(today - startDate);
 const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-const maxDays = 30;
+const maxDays = 200;
 
 if (diffDays > maxDays) {
-  console.log("Masa aktif telah berakhir.");
+  console.log("Beli Code Tolol.");
   process.exit();
 }
 
