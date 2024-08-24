@@ -1,4 +1,4 @@
-const radarRange = 2000; // extended range in meters
+const radarRange = 200; // extended range in meters
 
 function getRadarData() {
   // Logic to generate radar data based on radarRange
