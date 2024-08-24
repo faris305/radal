@@ -10,6 +10,7 @@
   "author": "Buyah",
   "license": "ISC",
   "dependencies": {
+    "albion-buyahradar": "file:",
     "buffercursor": "^0.0.12",
     "cap": "^0.2.1",
     "crypto": "^1.0.1",
